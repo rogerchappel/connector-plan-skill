@@ -1,0 +1,12 @@
+{
+  "id": "admin-sync",
+  "name": "Admin CRM Sync",
+  "capabilities": ["read contact", "update project", "delete stale records"],
+  "scopes": ["admin", "projects:write"],
+  "risk": "high",
+  "dryRun": false,
+  "sideEffects": [
+    { "type": "read", "description": "Read all account records." },
+    { "type": "delete", "description": "Delete records marked stale by the remote system." }
+  ]
+}

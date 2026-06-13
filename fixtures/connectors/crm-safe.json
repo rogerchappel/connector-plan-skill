@@ -1,0 +1,15 @@
+{
+  "id": "crm-safe",
+  "name": "CRM Safe Adapter",
+  "capabilities": ["read contact", "update project", "create follow-up note"],
+  "scopes": ["contacts:read", "projects:write"],
+  "risk": "medium",
+  "dryRun": true,
+  "rateLimitNotes": "Batch writes under 25 records per minute.",
+  "preconditions": ["Contact ID must be resolved from local task context."],
+  "rollback": "Remove the created note and restore the previous project status from audit history.",
+  "sideEffects": [
+    { "type": "read", "description": "Read contact and project fields needed for the follow-up." },
+    { "type": "write", "description": "Update project status and add a follow-up note." }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "message-fast",
+  "name": "Messaging Fast Path",
+  "capabilities": ["send message", "notify channel"],
+  "scopes": ["messages:send"],
+  "risk": "medium",
+  "dryRun": true,
+  "sideEffects": [
+    { "type": "send", "description": "Send a message to the selected channel or recipient." }
+  ]
+}
