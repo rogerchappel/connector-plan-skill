@@ -1,0 +1,5 @@
+{
+  "intent": "Send CRM follow-up after a project status meeting",
+  "target": "crm contact and project record",
+  "actions": ["read contact", "update project", "send message"]
+}

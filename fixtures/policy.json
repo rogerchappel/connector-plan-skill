@@ -1,0 +1,6 @@
+{
+  "requireApprovalFor": ["write", "send", "delete"],
+  "deniedScopes": ["admin"],
+  "preferredConnectors": ["crm-safe"],
+  "maxRisk": "medium"
+}
