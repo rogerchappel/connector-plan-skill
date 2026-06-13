@@ -1,0 +1,31 @@
+{
+  "name": "connector-plan-skill",
+  "version": "0.1.0",
+  "description": "Local-first connector routing and dry-run planning for agent workflows.",
+  "type": "module",
+  "bin": {
+    "connector-plan": "./src/cli.js"
+  },
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check src/*.js test/*.test.js",
+    "smoke": "node src/cli.js route --task fixtures/follow-up-task.json --connectors fixtures/connectors --policy fixtures/policy.json --format markdown"
+  },
+  "keywords": [
+    "agent-skill",
+    "connectors",
+    "dry-run",
+    "planning"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "files": [
+    "src",
+    "fixtures",
+    "docs",
+    "SKILL.md",
+    "README.md"
+  ]
+}
