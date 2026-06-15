@@ -58,3 +58,12 @@ Each connector is a JSON file with capabilities, scopes, risk, dry-run support, 
 - JSON only; YAML support is future work.
 - Scoring is transparent but simple.
 - Manifest claims are not verified against remote systems.
+
+## Release Verification
+
+Before publishing or tagging a release, run the same verification path used by CI:
+
+- `npm run release:check`
+- `npm run package:smoke`
+
+See `docs/release-readiness.md` for the package surface, CLI bins, and reviewer checklist.
