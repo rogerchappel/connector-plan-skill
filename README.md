@@ -67,3 +67,6 @@ Before publishing or tagging a release, run the same verification path used by C
 - `npm run package:smoke`
 
 See `docs/release-readiness.md` for the package surface, CLI bins, and reviewer checklist.
+`package:smoke` runs a dry-run package build and confirms the CLI, planner
+modules, connector fixtures, examples, skill file, README, and license are
+present in the tarball.
