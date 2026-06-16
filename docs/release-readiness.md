@@ -17,7 +17,7 @@ Use this checklist before publishing, tagging, or asking reviewers to trust the 
 - `npm run check`: `node --check src/*.js test/*.test.js`
 - `npm run test`: `node --test`
 - `npm run smoke`: `node src/cli.js route --task fixtures/follow-up-task.json --connectors fixtures/connectors --policy fixtures/policy.json --format markdown`
-- `npm run package:smoke`: `npm pack --dry-run`
+- `npm run package:smoke`: `node scripts/package-smoke.js`
 - `npm run release:check`: `npm run check && npm test && npm run smoke && npm run package:smoke`
 
 Run `npm run release:check` before opening a release PR. Record any skipped command and the reason in the PR body.
