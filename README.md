@@ -8,8 +8,7 @@ Local-first connector routing and dry-run planning for agent workflows.
 
 ```bash
 npm install
-npm test
-npm run smoke
+npm run release:check
 ```
 
 Route a task:
@@ -64,7 +63,6 @@ Each connector is a JSON file with capabilities, scopes, risk, dry-run support, 
 Before publishing or tagging a release, run the same verification path used by CI:
 
 - `npm run release:check`
-- `npm run package:smoke`
 
 See `docs/release-readiness.md` for the package surface, CLI bins, and reviewer checklist.
 `package:smoke` runs a dry-run package build and confirms the CLI, planner
