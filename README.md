@@ -68,3 +68,9 @@ See `docs/release-readiness.md` for the package surface, CLI bins, and reviewer 
 `package:smoke` runs a dry-run package build and confirms the CLI, planner
 modules, connector fixtures, examples, skill file, README, and license are
 present in the tarball.
+
+## Verification
+
+```bash
+npm test
+```
