@@ -72,5 +72,7 @@ present in the tarball.
 ## Verification
 
 ```bash
+npm run lint
 npm test
+npm run release:check
 ```
