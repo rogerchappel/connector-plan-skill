@@ -6,6 +6,8 @@ import { renderJson, renderMarkdownDryRun, renderMarkdownRoute } from "./render.
 
 async function main(argv) {
   const [command, ...rest] = argv;
+  if (command === "--help" || command === "-h") return usage();
+
   const args = parseArgs(rest);
   if (!command || args.help) return usage();
 
