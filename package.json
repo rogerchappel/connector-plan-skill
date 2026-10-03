@@ -26,6 +26,7 @@
   },
   "files": [
     "src",
+    "scripts/package-smoke.js",
     "fixtures",
     "docs",
     "SKILL.md",
