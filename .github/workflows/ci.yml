@@ -23,24 +23,16 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Install dependencies
-        run: |
-          if [ -f package-lock.json ]; then
-            npm ci
-          else
-            npm install
-          fi
+        run: npm ci
 
       - name: Check package
-        run: npm run check --if-present
-
-      - name: Build package
-        run: npm run build --if-present
+        run: npm run check
 
       - name: Run tests
-        run: npm test --if-present
+        run: npm test
 
       - name: Run smoke test
-        run: npm run smoke --if-present
+        run: npm run smoke
 
       - name: Run package smoke test
-        run: npm run package:smoke --if-present
+        run: npm run package:smoke

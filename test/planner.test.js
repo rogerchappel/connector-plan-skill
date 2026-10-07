@@ -26,3 +26,13 @@ test("builds an approval-aware dry-run plan", async () => {
   assert.equal(plan.approval.required, true);
   assert.match(renderMarkdownDryRun(plan), /Intended Writes/);
 });
+
+test('CI installs only through npm ci and runs required release checks', async () => {
+  const { readFile } = await import('node:fs/promises');
+  const workflow = await readFile(new URL('../.github/workflows/ci.yml', import.meta.url), 'utf8');
+  assert.match(workflow, /run: npm ci\s/);
+  assert.doesNotMatch(workflow, /npm install/);
+  for (const script of ['check', 'test', 'smoke', 'package:smoke']) {
+    assert.match(workflow, new RegExp(`run: npm (?:run )?${script}(?:\\s|$)`));
+  }
+});
